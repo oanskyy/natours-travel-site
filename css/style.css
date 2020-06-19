@@ -7,6 +7,35 @@
   --dark-green-rgb: rgba(40, 180, 133, 0.8);
 }
 
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); 
+  }
+  80% {
+    transform: translateX(1rem); 
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0); 
+  } 
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); 
+  }
+  80% {
+    transform: translateX(-1rem); 
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0); 
+  } 
+}
+
+
 /* start clean, full size browswer without any margin or padding space  (margin 0; padding: 0;) to our elements h1, img, etc */
 /* #BESTpractice: using the universal selector * {} */
 /* box sizing: border-box changes the box model so that borders ad paddings are no longer added to the height or width of an element so with this getting rid of that behaviour */
@@ -65,18 +94,25 @@ body {
   color: #fff;
   text-transform: uppercase;
   margin-bottom: 6rem;
+  backface-visibility: hidden;
 }
+
   .heading-primary--main {
     display: block;
     font-size: 6rem;
     font-weight: 400;
     letter-spacing: 3.5rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s; 
+    animation-timing-function: ease-out;
   }
+
   .heading-primary--sub {
     display: block;
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: 1.75rem;
+    animation: moveInRight 1s ease-out;
   }
 
 
