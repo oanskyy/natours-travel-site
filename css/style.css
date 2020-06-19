@@ -42,3 +42,13 @@ body {
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   /* POSITION is set absolute in realtion to its parent element, here the header. so we should set the header to relative. so now this (header) is the origin from where top and left start to count  */ 
 }
+
+.header__logo-box {
+  position: absolute;
+  top: 4rem;
+  left: 4rem; 
+}
+
+.header__logo {
+  height: 3.5rem; 
+}
