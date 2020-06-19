@@ -1,0 +1,44 @@
+:root { 
+  --light-green: #7ed56f; 
+  --medium-green: #55c57a; 
+  --dark-green: #28b485;
+
+  --medium-green-rgb: rgba(85, 197, 122, 0.8); 
+  --dark-green-rgb: rgba(40, 180, 133, 0.8);
+}
+
+/* start clean, full size browswer without any margin or padding space  (margin 0; padding: 0;) to our elements h1, img, etc */
+/* #BESTpractice: using the universal selector * {} */
+/* box sizing: border-box changes the box model so that borders ad paddings are no longer added to the height or width of an element so with this getting rid of that behaviour */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; 
+}
+
+html {
+  font-size: 62.5%; 
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem; 
+}
+
+.header {
+  height: 95vh;
+  /*to make the bg color transparent we switch from hex to rgba with a- changing the opacity, so we can see the bg img now) */
+  background-image: linear-gradient(to right bottom, var(--medium-green-rgb), var(--dark-green-rgb)), 
+                    url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  /* POSITION is set absolute in realtion to its parent element, here the header. so we should set the header to relative. so now this (header) is the origin from where top and left start to count  */ 
+}
