@@ -171,22 +171,25 @@ body {
       background-color: #fff; 
     }
   
-  // .btn::after {
-  //   content: "";
-  //   display: inline-block;
-  //   height: 100%;
-  //   width: 100%;
-  //   border-radius: 10rem;
-  //   /* ABSOLUTE positioning needs to have a reference. and the reference is the first elements with a relative position that it can find, now in this case it would be the header. but we dont want it to be the header, we want it to be hidden after the btn and so the reference should be the btn*/
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   z-index: -1;
-  //   transition: all .4s; 
-  // }
+
+  /* :: after - The trick here is to add an element that looks exactly like the element/btn but we put it behind the btn 
+  */
+  .btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    /* ABSOLUTE positioning needs to have a reference. and the reference is the first elements with a relative position that it can find, now in this case it would be the header. but we dont want it to be the header, we want it to be hidden after the btn and so the reference should be the btn*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s; 
+  }
   
-  // .btn--animated {
-  //   animation: moveInBottom .5s ease-out .75s;
-  //   animation-fill-mode: backwards; 
-  // }
+  .btn--animated {
+    animation: moveInBottom .5s ease-out .75s;
+    animation-fill-mode: backwards; 
+  }
   
