@@ -116,3 +116,77 @@ body {
   }
 
 
+/*
+  .heading-secondary {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: .19rem;
+    display: inline-block;
+    background-image: linear-gradient(to right, #55c57a, #28b485);
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: all .2s; }
+    .heading-secondary:hover {
+      transform: skewY(2deg) skewX(15deg) scale(1.1);
+      text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
+  
+  .u-center-text {
+    text-align: center; }
+  
+  .u-margin-bottom-8 {
+    margin-bottom: 8rem; }
+  
+*/
+
+.btn:link, .btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all .2s;
+    position: relative;
+    font-size: 1.6rem; 
+  }
+  
+  .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); 
+  }
+    .btn:hover::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0; 
+    }
+  
+  .btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); 
+  }
+  
+  .btn--white {
+    background-color: #fff;
+    color: #777; }
+    .btn--white::after {
+      background-color: #fff; 
+    }
+  
+  // .btn::after {
+  //   content: "";
+  //   display: inline-block;
+  //   height: 100%;
+  //   width: 100%;
+  //   border-radius: 10rem;
+  //   /* ABSOLUTE positioning needs to have a reference. and the reference is the first elements with a relative position that it can find, now in this case it would be the header. but we dont want it to be the header, we want it to be hidden after the btn and so the reference should be the btn*/
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   z-index: -1;
+  //   transition: all .4s; 
+  // }
+  
+  // .btn--animated {
+  //   animation: moveInBottom .5s ease-out .75s;
+  //   animation-fill-mode: backwards; 
+  // }
+  
