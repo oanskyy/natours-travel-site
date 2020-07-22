@@ -1,0 +1,21 @@
+
+/* start clean, full size browswer without any margin or padding space  (margin 0; padding: 0;) to our elements h1, img, etc */
+  /* #BESTpractice: using the universal selector * {} */
+  /* box sizing: border-box changes the box model so that borders ad paddings are no longer added to the height or width of an element so with this getting rid of that behaviour */
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit; 
+}
+
+html {
+    // This defines what 1rem equals
+    font-size: 62.5%; 
+}
+
+body {
+    box-sizing: border-box;
+}
