@@ -12,7 +12,11 @@
 }
 
 html {
-    // This defines what 1rem equals
+    /*
+    // The root font-size is set in the html selector
+    // This defines what 1rem equals 10px=1rem
+    // the root font-size is 16px, which is 100%; but if you want 1rem=10px, then divide 10px by 16px (10/16 = 62.5%)
+    */
     font-size: 62.5%; 
 }
 
